@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>Testar o Rummiclock</title>
-<meta name="description" content="Como testar o Rummiclock antes da publicação.">
+<meta name="description" content="Conheça o Rummiclock e peça acesso ao teste antes da publicação.">
 <style>
   :root { --bg: #fbfaf7; --fg: #1f1d1a; --muted: #5d584f; --accent: #405642; --on-accent: #fff; --card: #fff; --line: #ddd7cb; --warn: #fff3d6; --warn-line: #d9b45a; }
   @media (prefers-color-scheme: dark) {
@@ -30,6 +30,12 @@
   section.lang { border-top: 1px solid var(--line); padding-top: 1rem; margin-top: 2rem; }
   details { border-top: 1px solid var(--line); padding: .7rem 0; }
   summary { cursor: pointer; font-weight: 600; }
+  .banner { display: block; width: 100%; height: auto; border-radius: 16px; margin: 0 0 1rem; }
+  .cta { display: block; text-align: center; padding: .9rem; margin: 1rem 0; border-radius: 12px; background: var(--accent); color: var(--on-accent); font-weight: 700; text-decoration: none; }
+  .shots { display: flex; gap: .8rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: .3rem 0 .8rem; margin: 0 -1rem; padding-left: 1rem; padding-right: 1rem; }
+  .shots figure { flex: 0 0 62%; max-width: 15rem; margin: 0; scroll-snap-align: center; }
+  .shots img { width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); display: block; }
+  .shots figcaption { text-align: center; font-size: .85rem; color: var(--muted); margin-top: .3rem; }
   ul.apps { list-style: none; padding: 0; }
   ul.apps li { margin: .6rem 0; padding: 1rem; background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
   ul.apps a { margin-right: 1rem; }
@@ -37,19 +43,46 @@
 </head>
 <body>
 <main>
+<img class="banner" src="../img/banner.webp" alt="Rummiclock, teste fechado, por Caburé Studio" width="1200" height="300">
 <h1>Testar o Rummiclock</h1>
-<p>Cronômetro de turnos e placar para jogos de mesa. Obrigado por ajudar! O Google exige que um grupo de pessoas teste o app por <strong>14 dias</strong> antes de ele ser publicado. Você só precisa de um <strong>celular Android</strong> e de uma <strong>conta Google</strong> (a mesma do Gmail e da Play Store).</p>
+<p>Obrigado por ajudar a testar o Rummiclock! Antes de publicarmos o app na Play Store, o Google exige que um grupo de pessoas o teste por <strong>14 dias</strong>. Você só precisa de um <strong>celular Android</strong> e de uma <strong>conta Google</strong> (a mesma do Gmail e da Play Store).</p>
+<a class="cta" href="#passos">Quero testar</a>
 
+<h2>Sobre o app</h2>
+<p>O Rummiclock é o cronômetro de turnos e o placar do seu grupo de jogos de mesa.</p>
+<ul>
+  <li>Cronômetro de turno com avisos.</li>
+  <li>Cadastro de jogadores (até 16), com nomes e avatares, e a mesa de cada rodada com a ordem dos turnos.</li>
+  <li>Sugestão de rodízio: quem sai e quem entra na próxima rodada.</li>
+  <li>Registro de cada partida e dos pontos.</li>
+  <li>Encontros, histórico e ranking do encontro, do mês e geral, com estatísticas de tempo.</li>
+  <li>Compartilhe o placar como imagem (ideal para o WhatsApp) ou exporte as partidas em CSV.</li>
+  <li>Backup em arquivo para guardar ou levar seus dados para outro aparelho.</li>
+  <li>Em português, inglês e espanhol.</li>
+</ul>
+<p>Sem conta, sem anúncios e sem internet: tudo fica no seu aparelho. O app não coleta nem envia dados.</p>
+
+<h2>Como ele é</h2>
+<div class="shots" tabindex="0" aria-label="Capturas de tela">
+  <figure><img src="../img/shot-01-inicio.webp" alt="Tela inicial: placar de hoje e a mesa da rodada" width="540" height="960" loading="lazy"><figcaption>Início</figcaption></figure>
+  <figure><img src="../img/shot-02-partida.webp" alt="Partida em andamento com o cronômetro do turno" width="540" height="960" loading="lazy"><figcaption>Partida</figcaption></figure>
+  <figure><img src="../img/shot-03-estouro.webp" alt="Tela vermelha quando o tempo do turno estoura" width="540" height="960" loading="lazy"><figcaption>Estouro do tempo</figcaption></figure>
+  <figure><img src="../img/shot-04-resultado.webp" alt="Registro dos pontos de cada jogador" width="540" height="960" loading="lazy"><figcaption>Resultado</figcaption></figure>
+  <figure><img src="../img/shot-06-placar.webp" alt="Placar do encontro com o ranking dos jogadores" width="540" height="960" loading="lazy"><figcaption>Placar</figcaption></figure>
+  <figure><img src="../img/shot-05-ajustes.webp" alt="Ajustes: tempo por turno e volume geral" width="540" height="960" loading="lazy"><figcaption>Ajustes</figcaption></figure>
+</div>
+
+<h2 id="passos">Como participar</h2>
 <section class="step">
   <h2><span class="num">1</span>Peça seu acesso</h2>
-  <p>Informe seu nome e o <strong>e-mail da conta Google do celular</strong>. Eu libero o seu acesso, o que pode levar até 1 dia.</p>
+  <p>Informe seu nome e o <strong>e-mail da conta Google do seu celular</strong>. Liberaremos o seu acesso em até 1 dia.</p>
   <a class="button" href="https://forms.gle/WCFBmfcokC31SMvf9">Pedir acesso</a>
 </section>
 
 <section class="step">
   <h2><span class="num">2</span>Aceite o convite</h2>
-  <p>Quando eu avisar que está liberado, toque no botão abaixo <strong>no celular</strong> e depois em <strong>“Tornar-se testador”</strong>.</p>
-  <a class="button" aria-disabled="true" href="#">Em breve: eu aviso quando abrir</a>
+  <p>Quando o seu acesso for liberado, enviaremos o convite por <strong>e-mail ou WhatsApp</strong>. Abra o link <strong>no celular</strong> e toque em <strong>“Tornar-se testador”</strong>.</p>
+  <a class="button" aria-disabled="true" href="#">Em breve: avisaremos quando abrir</a>
 </section>
 
 <section class="step">
@@ -63,9 +96,9 @@
 
 <h2>Dúvidas comuns</h2>
 <details><summary>Não tenho Android</summary><p>Infelizmente o teste é só para celulares Android.</p></details>
-<details><summary>Apareceu “app não encontrado” ou “indisponível”</summary><p>Confira se você está logado no celular com o <strong>mesmo e-mail</strong> que me passou. Se estiver, espere algumas horas e tente de novo: o Google demora um pouco para liberar.</p></details>
-<details><summary>O que o app faz com os meus dados?</summary><p>Nada sai do seu celular. Seu e-mail só é usado para liberar o teste. Veja a <a href="../privacy/">política de privacidade</a>.</p></details>
-<details><summary>Quero sair do teste</summary><p>Pode sair quando quiser, é só me avisar. Se puder, fique até o fim dos 14 dias: ajuda muito.</p></details>
+<details><summary>Apareceu “app não encontrado” ou “indisponível”</summary><p>Confira se você está logado no celular com o <strong>mesmo e-mail</strong> que nos informou. Se estiver, espere algumas horas e tente de novo: o Google demora um pouco para liberar.</p></details>
+<details><summary>O que o app faz com os meus dados?</summary><p>Nada sai do seu celular. Seu e-mail e seu WhatsApp só são usados para liberar o teste e avisar você. Veja a <a href="../privacy/">política de privacidade</a>.</p></details>
+<details><summary>Quero sair do teste</summary><p>Pode sair quando quiser, é só nos avisar. Se puder, fique até o fim dos 14 dias: ajuda muito.</p></details>
 <p class="muted">Caburé Studio · <a href="mailto:tiraco@outlook.com">tiraco@outlook.com</a></p>
 </main>
 </body>

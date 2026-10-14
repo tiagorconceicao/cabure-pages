@@ -11,3 +11,10 @@ Páginas públicas do Caburé Studio (GitHub Pages): política de privacidade e 
 
 Endereços (com o usuário do GitHub; com domínio próprio, só trocar a base):
 `/<app>/privacy/`, `/<app>/testers/`.
+
+## Imagens da página de testadores
+
+`python3 tools/images.py ../rummiclock/docs/loja rummiclock/img` gera, a partir dos PNG do repositório
+`rummiclock` (banner do formulário, ícone e capturas em português), os WebP leves usados em
+`/<app>/testers/` (172 KB no total). Os caminhos em `apps.json` (`banner.src`, `screenshots[].src`) são
+relativos à pasta do app.

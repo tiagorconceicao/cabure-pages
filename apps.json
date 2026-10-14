@@ -12,7 +12,55 @@
       "testers": {
         "days": 14,
         "signupUrl": "https://forms.gle/WCFBmfcokC31SMvf9",
-        "optinUrl": ""
+        "optinUrl": "",
+        "banner": {
+          "src": "img/banner.webp",
+          "alt": "Rummiclock, teste fechado, por Caburé Studio"
+        },
+        "about": "O Rummiclock é o cronômetro de turnos e o placar do seu grupo de jogos de mesa.",
+        "features": [
+          "Cronômetro de turno com avisos.",
+          "Cadastro de jogadores (até 16), com nomes e avatares, e a mesa de cada rodada com a ordem dos turnos.",
+          "Sugestão de rodízio: quem sai e quem entra na próxima rodada.",
+          "Registro de cada partida e dos pontos.",
+          "Encontros, histórico e ranking do encontro, do mês e geral, com estatísticas de tempo.",
+          "Compartilhe o placar como imagem (ideal para o WhatsApp) ou exporte as partidas em CSV.",
+          "Backup em arquivo para guardar ou levar seus dados para outro aparelho.",
+          "Em português, inglês e espanhol."
+        ],
+        "privacyNote": "Sem conta, sem anúncios e sem internet: tudo fica no seu aparelho. O app não coleta nem envia dados.",
+        "screenshots": [
+          {
+            "src": "img/shot-01-inicio.webp",
+            "alt": "Tela inicial: placar de hoje e a mesa da rodada",
+            "caption": "Início"
+          },
+          {
+            "src": "img/shot-02-partida.webp",
+            "alt": "Partida em andamento com o cronômetro do turno",
+            "caption": "Partida"
+          },
+          {
+            "src": "img/shot-03-estouro.webp",
+            "alt": "Tela vermelha quando o tempo do turno estoura",
+            "caption": "Estouro do tempo"
+          },
+          {
+            "src": "img/shot-04-resultado.webp",
+            "alt": "Registro dos pontos de cada jogador",
+            "caption": "Resultado"
+          },
+          {
+            "src": "img/shot-06-placar.webp",
+            "alt": "Placar do encontro com o ranking dos jogadores",
+            "caption": "Placar"
+          },
+          {
+            "src": "img/shot-05-ajustes.webp",
+            "alt": "Ajustes: tempo por turno e volume geral",
+            "caption": "Ajustes"
+          }
+        ]
       },
       "privacy": {
         "updated": "2026-10-14",

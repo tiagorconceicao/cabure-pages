@@ -39,6 +39,12 @@ const STYLE = `
   section.lang { border-top: 1px solid var(--line); padding-top: 1rem; margin-top: 2rem; }
   details { border-top: 1px solid var(--line); padding: .7rem 0; }
   summary { cursor: pointer; font-weight: 600; }
+  .banner { display: block; width: 100%; height: auto; border-radius: 16px; margin: 0 0 1rem; }
+  .cta { display: block; text-align: center; padding: .9rem; margin: 1rem 0; border-radius: 12px; background: var(--accent); color: var(--on-accent); font-weight: 700; text-decoration: none; }
+  .shots { display: flex; gap: .8rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: .3rem 0 .8rem; margin: 0 -1rem; padding-left: 1rem; padding-right: 1rem; }
+  .shots figure { flex: 0 0 62%; max-width: 15rem; margin: 0; scroll-snap-align: center; }
+  .shots img { width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); display: block; }
+  .shots figcaption { text-align: center; font-size: .85rem; color: var(--muted); margin-top: .3rem; }
   ul.apps { list-style: none; padding: 0; }
   ul.apps li { margin: .6rem 0; padding: 1rem; background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
   ul.apps a { margin-right: 1rem; }
@@ -176,23 +182,46 @@ function button(url, label, soon) {
 
 function testersPage(app) {
   const t = app.testers;
+  const banner = t.banner
+    ? `<img class="banner" src="../${esc(t.banner.src)}" alt="${esc(t.banner.alt)}" width="1200" height="300">\n`
+    : '';
+  const features = (t.features ?? []).map((item) => `  <li>${esc(item)}</li>`).join('\n');
+  const shots = (t.screenshots ?? [])
+    .map(
+      (shot) =>
+        `  <figure><img src="../${esc(shot.src)}" alt="${esc(shot.alt)}" width="540" height="960" loading="lazy"><figcaption>${esc(shot.caption)}</figcaption></figure>`,
+    )
+    .join('\n');
+  const about = t.about
+    ? `<h2>Sobre o app</h2>
+<p>${esc(t.about)}</p>
+${features ? `<ul>\n${features}\n</ul>` : ''}
+${t.privacyNote ? `<p>${esc(t.privacyNote)}</p>` : ''}`
+    : '';
+  const gallery = shots ? `<h2>Como ele é</h2>\n<div class="shots" tabindex="0" aria-label="Capturas de tela">\n${shots}\n</div>` : '';
   return page({
     title: `Testar o ${app.name}`,
-    description: `Como testar o ${app.name} antes da publicação.`,
+    description: `Conheça o ${app.name} e peça acesso ao teste antes da publicação.`,
     noindex: true,
-    body: `<h1>Testar o ${esc(app.name)}</h1>
-<p>${esc(app.tagline)}. Obrigado por ajudar! O Google exige que um grupo de pessoas teste o app por <strong>${t.days} dias</strong> antes de ele ser publicado. Você só precisa de um <strong>celular Android</strong> e de uma <strong>conta Google</strong> (a mesma do Gmail e da Play Store).</p>
+    body: `${banner}<h1>Testar o ${esc(app.name)}</h1>
+<p>Obrigado por ajudar a testar o ${esc(app.name)}! Antes de publicarmos o app na Play Store, o Google exige que um grupo de pessoas o teste por <strong>${t.days} dias</strong>. Você só precisa de um <strong>celular Android</strong> e de uma <strong>conta Google</strong> (a mesma do Gmail e da Play Store).</p>
+<a class="cta" href="#passos">Quero testar</a>
 
+${about}
+
+${gallery}
+
+<h2 id="passos">Como participar</h2>
 <section class="step">
   <h2><span class="num">1</span>Peça seu acesso</h2>
-  <p>Informe seu nome e o <strong>e-mail da conta Google do celular</strong>. Eu libero o seu acesso, o que pode levar até 1 dia.</p>
+  <p>Informe seu nome e o <strong>e-mail da conta Google do seu celular</strong>. Liberaremos o seu acesso em até 1 dia.</p>
   ${button(t.signupUrl, 'Pedir acesso', 'Em breve')}
 </section>
 
 <section class="step">
   <h2><span class="num">2</span>Aceite o convite</h2>
-  <p>Quando eu avisar que está liberado, toque no botão abaixo <strong>no celular</strong> e depois em <strong>“Tornar-se testador”</strong>.</p>
-  ${button(t.optinUrl, 'Aceitar o convite', 'Em breve: eu aviso quando abrir')}
+  <p>Quando o seu acesso for liberado, enviaremos o convite por <strong>e-mail ou WhatsApp</strong>. Abra o link <strong>no celular</strong> e toque em <strong>“Tornar-se testador”</strong>.</p>
+  ${button(t.optinUrl, 'Aceitar o convite', 'Em breve: avisaremos quando abrir')}
 </section>
 
 <section class="step">
@@ -206,9 +235,9 @@ function testersPage(app) {
 
 <h2>Dúvidas comuns</h2>
 <details><summary>Não tenho Android</summary><p>Infelizmente o teste é só para celulares Android.</p></details>
-<details><summary>Apareceu “app não encontrado” ou “indisponível”</summary><p>Confira se você está logado no celular com o <strong>mesmo e-mail</strong> que me passou. Se estiver, espere algumas horas e tente de novo: o Google demora um pouco para liberar.</p></details>
-<details><summary>O que o app faz com os meus dados?</summary><p>Nada sai do seu celular. Seu e-mail só é usado para liberar o teste.${app.privacy ? ` Veja a <a href="../privacy/">política de privacidade</a>.` : ''}</p></details>
-<details><summary>Quero sair do teste</summary><p>Pode sair quando quiser, é só me avisar. Se puder, fique até o fim dos ${t.days} dias: ajuda muito.</p></details>
+<details><summary>Apareceu “app não encontrado” ou “indisponível”</summary><p>Confira se você está logado no celular com o <strong>mesmo e-mail</strong> que nos informou. Se estiver, espere algumas horas e tente de novo: o Google demora um pouco para liberar.</p></details>
+<details><summary>O que o app faz com os meus dados?</summary><p>Nada sai do seu celular. Seu e-mail e seu WhatsApp só são usados para liberar o teste e avisar você.${app.privacy ? ` Veja a <a href="../privacy/">política de privacidade</a>.` : ''}</p></details>
+<details><summary>Quero sair do teste</summary><p>Pode sair quando quiser, é só nos avisar. Se puder, fique até o fim dos ${t.days} dias: ajuda muito.</p></details>
 ${footer()}`,
   });
 }
