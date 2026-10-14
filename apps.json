@@ -1,0 +1,65 @@
+{
+  "studio": {
+    "name": "Caburé Studio",
+    "contact": "tiraco@outlook.com"
+  },
+  "apps": [
+    {
+      "slug": "rummiclock",
+      "name": "Rummiclock",
+      "tagline": "Cronômetro de turnos e placar para jogos de mesa",
+      "package": "studio.cabure.rummiclock",
+      "testers": {
+        "days": 14,
+        "signupUrl": "https://forms.gle/WCFBmfcokC31SMvf9",
+        "optinUrl": ""
+      },
+      "privacy": {
+        "updated": "2026-10-14",
+        "minAge": 13,
+        "about": {
+          "pt": "um app de turnos e cronômetro para jogos de mesa",
+          "en": "a turn tracker and timer for board games",
+          "es": "una app de turnos y cronómetro para juegos de mesa"
+        },
+        "noAccountFeatures": {
+          "pt": "O app não tem conta, login, anúncios nem ferramentas de análise ou de relatório de erros, e não tem servidor próprio.",
+          "en": "The app has no account, no sign-in, no ads, no analytics or crash-reporting tools, and no server of its own.",
+          "es": "La app no tiene cuenta, inicio de sesión, anuncios ni herramientas de análisis o de informes de errores, y no tiene servidor propio."
+        },
+        "stored": {
+          "pt": [
+            "Os nomes dos jogadores que você cadastra (podem ser apelidos).",
+            "As partidas, os pontos, os encontros, o histórico e o ranking.",
+            "As suas configurações (tempos, alertas, volume, idioma)."
+          ],
+          "en": [
+            "The player names you add (they can be nicknames).",
+            "Games, scores, meetups, history and rankings.",
+            "Your settings (times, alerts, volume, language)."
+          ],
+          "es": [
+            "Los nombres de los jugadores que registras (pueden ser apodos).",
+            "Las partidas, los puntos, los encuentros, el historial y el ranking.",
+            "Tus ajustes (tiempos, alertas, volumen, idioma)."
+          ]
+        },
+        "storedNote": {
+          "pt": "Esses dados ficam num banco de dados local do app. O app também está configurado para não entrar no backup automático do Android. Para apagar tudo, desinstale o app ou limpe os dados dele nas configurações do Android. Dentro do app, você também pode excluir jogadores e partidas.",
+          "en": "This data lives in a local database of the app. The app is also set to stay out of Android's automatic backup. To erase everything, uninstall the app or clear its data in Android settings. Inside the app you can also delete players and games.",
+          "es": "Estos datos están en una base de datos local de la app. La app también está configurada para no entrar en la copia de seguridad automática de Android. Para borrar todo, desinstala la app o borra sus datos en los ajustes de Android. Dentro de la app también puedes eliminar jugadores y partidas."
+        },
+        "sharing": {
+          "pt": "Você pode gerar um arquivo CSV, uma imagem do placar ou um arquivo de backup. Esses arquivos só saem do app quando <strong>você</strong> toca em compartilhar e escolhe o destino (por exemplo, WhatsApp, e-mail ou Drive). A partir daí, valem as regras do app que você escolheu. O arquivo de backup é protegido contra alteração, mas não deve ser tratado como um cofre: guarde-o como guardaria qualquer arquivo pessoal. Para restaurar, você escolhe o arquivo no seu aparelho.",
+          "en": "You can create a CSV file, a scoreboard image or a backup file. These files leave the app only when <strong>you</strong> tap share and choose a destination (for example WhatsApp, email or Drive). From then on, the rules of the app you chose apply. The backup file is protected against tampering, but it is not a vault: keep it as you would any personal file. To restore, you pick the file on your device.",
+          "es": "Puedes generar un archivo CSV, una imagen del marcador o un archivo de copia de seguridad. Estos archivos solo salen de la app cuando <strong>tú</strong> tocas compartir y eliges el destino (por ejemplo WhatsApp, correo o Drive). Desde ahí valen las reglas de la app que elegiste. El archivo de copia de seguridad está protegido contra alteraciones, pero no es una caja fuerte: guárdalo como cualquier archivo personal. Para restaurar, eliges el archivo en tu dispositivo."
+        },
+        "permissions": {
+          "pt": "O app usa a vibração (alertas) e o ajuste de áudio (sons dos alertas) e mantém a tela ligada durante uma partida. Ele não pede acesso a contatos, localização, câmera, microfone, fotos ou arquivos do aparelho.",
+          "en": "The app uses vibration (alerts) and audio settings (alert sounds) and keeps the screen on during a game. It does not ask for access to contacts, location, camera, microphone, photos or your device's files.",
+          "es": "La app usa la vibración (alertas) y el ajuste de audio (sonidos de las alertas) y mantiene la pantalla encendida durante una partida. No pide acceso a contactos, ubicación, cámara, micrófono, fotos ni archivos del dispositivo."
+        }
+      }
+    }
+  ]
+}
