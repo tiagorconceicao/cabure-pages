@@ -60,7 +60,8 @@
             "alt": "Ajustes: tempo por turno e volume geral",
             "caption": "Ajustes"
           }
-        ]
+        ],
+        "feedbackUrl": ""
       },
       "privacy": {
         "updated": "2026-10-14",

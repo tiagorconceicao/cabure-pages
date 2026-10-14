@@ -229,6 +229,12 @@ ${gallery}
   <p>Toque em <strong>“Instalar”</strong> na Play Store e abra o ${esc(app.name)}. Use algumas vezes nos próximos ${t.days} dias, por exemplo numa noite de jogos com os amigos.</p>
 </section>
 
+<section class="step">
+  <h2><span class="num">4</span>Conte o que achou</h2>
+  <p>Durante e depois dos ${t.days} dias, conte-nos como foi: o que funcionou, o que atrapalhou e o que você mudaria. Leva cerca de 2 minutos, e você pode responder mais de uma vez.</p>
+  ${button(t.feedbackUrl, 'Enviar feedback', 'Em breve')}
+</section>
+
 <div class="warn">
   <strong>Importante:</strong> não saia do teste nem desinstale o app durante os ${t.days} dias. O Google conta os dias seguidos: se você sair, a sua contagem recomeça.
 </div>
